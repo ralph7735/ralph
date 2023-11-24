@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 600px;height: 800px;"></div>
+	<script>
+		var ectest=echarts.init(document.getElementById("main"))
+		var option = {
+			xAxis: {
+				type: 'category',
+				data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+			},
+			yAxis: {
+				type: 'value'
+			},
+			series: [{
+				data: [150, 230, 500, 218, 135, 147, 260],
+				type: 'line'
+			}]
+		};
+		ectest.setOption(option);
+			
+	</script>
+    
+
+</body>
+</html>
